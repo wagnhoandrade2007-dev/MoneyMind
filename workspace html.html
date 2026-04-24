@@ -2,8 +2,9 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>MoneyMind Pro</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -12,69 +13,35 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{
 font-family:Inter,sans-serif;
-background:linear-gradient(135deg,#0b1220,#111827,#1e293b);
+background:linear-gradient(135deg,#0f172a,#111827,#1e1b4b);
 color:#fff;
 min-height:100vh;
 }
+.hidden{display:none}
+
 .hero{
 min-height:100vh;
 display:flex;
-justify-content:center;
 align-items:center;
-text-align:center;
+justify-content:center;
 padding:30px;
+text-align:center;
 background:
-radial-gradient(circle at top right,#8b5cf650,transparent),
-linear-gradient(135deg,#0b1220,#111827,#1e293b);
+radial-gradient(circle at top right,#8b5cf640,transparent),
+linear-gradient(135deg,#0f172a,#111827,#1e1b4b);
 }
-.hero-content{max-width:760px}
+.hero-content{max-width:780px}
 .hero h1{
-font-size:3.2rem;
+font-size:3.3rem;
 font-weight:800;
 line-height:1.1;
-margin-bottom:18px;
+margin-bottom:20px;
 }
 .hero p{
 font-size:1.08rem;
-color:#94a3b8;
 line-height:1.7;
-margin-bottom:26px;
-}
-.hero button{width:auto;padding:16px 28px}
-
-.login-screen{
-padding:42px 20px;
-display:flex;
-justify-content:center;
-}
-.login-box{
-width:100%;
-max-width:430px;
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,255,255,.08);
-backdrop-filter:blur(20px);
-border-radius:28px;
-padding:34px;
-box-shadow:0 30px 80px rgba(0,0,0,.35);
-}
-.logo{
-font-size:2rem;
-font-weight:800;
-margin-bottom:8px;
-}
-.logo span{color:#8b5cf6}
-.sub{color:#94a3b8;margin-bottom:20px}
-
-input,select{
-width:100%;
-padding:14px;
-border:none;
-border-radius:14px;
-background:#1e293b;
-color:#fff;
-margin-top:12px;
-font-size:.95rem;
-outline:none;
+color:#cbd5e1;
+margin-bottom:28px;
 }
 
 button{
@@ -86,121 +53,157 @@ background:#8b5cf6;
 color:#fff;
 font-weight:700;
 cursor:pointer;
-margin-top:14px;
 transition:.2s;
+margin-top:14px;
 }
-button:hover{transform:translateY(-2px)}
+button:hover{
+transform:translateY(-2px);
+box-shadow:0 12px 20px rgba(139,92,246,.22);
+}
 
-.small-btn{background:#1e293b}
 .secondary{background:#1e293b}
-.hidden{display:none}
+.small-btn{background:#334155}
+
+input,select,textarea{
+width:100%;
+padding:14px;
+border:none;
+border-radius:14px;
+background:#1e293b;
+color:#fff;
+margin-top:12px;
+outline:none;
+font-size:.95rem;
+}
+
+.login-screen{
+padding:40px 20px;
+display:flex;
+justify-content:center;
+}
+
+.login-box{
+width:100%;
+max-width:430px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+border-radius:28px;
+padding:34px;
+box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+
+.logo{font-size:2rem;font-weight:800;margin-bottom:8px}
+.logo span{color:#8b5cf6}
+.sub{color:#94a3b8;margin-bottom:18px}
 
 .app{
-padding:28px;
-max-width:1320px;
+max-width:1400px;
 margin:auto;
+padding:28px;
 }
 
 .topbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-gap:12px;
-flex-wrap:wrap;
+gap:15px;
+flex-wrap:nowrap;
 margin-bottom:24px;
 }
 
-.top-actions{
+.menu-buttons{
 display:flex;
 gap:10px;
+flex-wrap:nowrap;
 }
-.top-actions button{
+
+.menu-buttons button{
 width:auto;
-padding:12px 18px;
-margin:0;
+min-width:170px;
+padding:14px 18px;
+margin-top:0;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:18px;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:14px;
 }
 
 .card{
 background:rgba(255,255,255,.05);
 border:1px solid rgba(255,255,255,.06);
-border-radius:24px;
 padding:22px;
+border-radius:24px;
 box-shadow:0 10px 30px rgba(0,0,0,.12);
 }
 
 .label{font-size:.92rem;color:#94a3b8}
-.metric{
-font-size:1.8rem;
-font-weight:800;
-margin-top:10px;
-}
+.metric{font-size:1.8rem;font-weight:800;margin-top:10px}
 
 .green{color:#22c55e}
 .red{color:#ef4444}
 .blue{color:#38bdf8}
 .purple{color:#a855f7}
+.orange{color:#fb923c}
 
 .section{margin-top:22px}
 
-.form-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:14px;
+.advice{
+margin-top:10px;
+line-height:1.6;
+color:#cbd5e1;
 }
 
-.advice{
-color:#cbd5e1;
-line-height:1.6;
-margin-top:10px;
+.progress-wrap{
+height:12px;
+background:#1e293b;
+border-radius:20px;
+overflow:hidden;
+margin-top:14px;
+}
+
+.progress-bar{
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#8b5cf6,#22c55e);
+transition:1s;
+}
+
+.list-box{
+margin-top:14px;
+padding:14px;
+border-radius:16px;
+background:#111827;
+line-height:1.7;
+color:#e2e8f0;
+}
+
+canvas{
+margin-top:16px;
+max-height:420px;
 }
 
 footer{
 text-align:center;
 padding:30px;
 color:#64748b;
-font-size:.9rem;
-}
-
-canvas{
-margin-top:14px;
-max-height:420px;
-}
-
-.fade-up{animation:fadeUp .7s ease}
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(25px)}
-to{opacity:1;transform:translateY(0)}
-}
-
-.glow{box-shadow:0 0 25px rgba(139,92,246,.22)}
-
-.progress-wrap{
-margin-top:14px;
-height:12px;
-background:#1e293b;
-border-radius:20px;
-overflow:hidden;
-}
-
-.progress-bar{
-height:100%;
-width:0%;
-transition:1s;
-background:linear-gradient(90deg,#8b5cf6,#22c55e);
-border-radius:20px;
+font-size:.92rem;
 }
 
 @media(max-width:768px){
-.hero h1{font-size:2.35rem}
+.hero h1{font-size:2.2rem}
 .app{padding:18px}
-.top-actions{width:100%}
-.top-actions button{flex:1}
+.topbar{flex-wrap:wrap}
+.menu-buttons{width:100%;flex-wrap:wrap}
+.menu-buttons button{flex:1;min-width:auto}
 }
 </style>
 </head>
@@ -210,13 +213,14 @@ border-radius:20px;
 <section class="hero">
 <div class="hero-content">
 <h1>Controle seu dinheiro.<br>Construa seu futuro.</h1>
-<p>A plataforma financeira inteligente que transforma gastos em decisões estratégicas.</p>
+<p>A plataforma financeira inteligente que une gastos e investimentos.</p>
 <button onclick="scrollToLogin()">Começar Agora</button>
 </div>
 </section>
 
 <section id="loginScreen" class="login-screen">
 <div class="login-box">
+
 <div class="logo">Money<span>Mind</span></div>
 <div class="sub">Sua central financeira inteligente.</div>
 
@@ -226,73 +230,99 @@ border-radius:20px;
 
 <button onclick="login()">Entrar</button>
 <button class="small-btn" onclick="guest()">Entrar como visitante</button>
+
 </div>
 </section>
 
 <section id="app" class="hidden">
 <div class="app">
 
-<div class="topbar">
+<div class="topbar card">
 <div>
 <h2 id="welcome">Olá</h2>
-<p style="color:#94a3b8">Tenha clareza sobre seu dinheiro.</p>
+<p style="color:#94a3b8">Gerencie sua vida financeira.</p>
 </div>
 
-<div class="top-actions">
-<button class="secondary" onclick="toggleTheme()">🌙 Tema</button>
-<button onclick="logout()">Sair</button>
+<div class="menu-buttons">
+<button class="secondary" onclick="showTab('gastos')">💸 Gastos</button>
+<button class="secondary" onclick="showTab('investimentos')">📈 Investimentos</button>
+<button onclick="logout()">🚪 Sair</button>
 </div>
 </div>
 
-<!-- cards -->
+<!-- GASTOS -->
+<div id="gastosPage">
+
 <div class="grid">
 <div class="card"><div class="label">Renda Mensal</div><div class="metric green" id="m1">R$ 0,00</div></div>
 <div class="card"><div class="label">Despesas Totais</div><div class="metric red" id="m2">R$ 0,00</div></div>
 <div class="card"><div class="label">Saldo Livre</div><div class="metric blue" id="m3">R$ 0,00</div></div>
-<div class="card"><div class="label">Valor Sugerido p/ Investir</div><div class="metric purple" id="m4">R$ 0,00</div></div>
+<div class="card"><div class="label">Investimento Sugerido</div><div class="metric purple" id="m4">R$ 0,00</div></div>
 </div>
 
-<!-- inputs -->
 <div class="card section">
-<div class="label">Informe seus valores mensais</div>
+<div class="label">Controle Financeiro</div>
 <div class="form-grid">
 <input id="income" type="number" placeholder="Quanto ganha por mês">
 <input id="fixed" type="number" placeholder="Contas fixas">
 <input id="variable" type="number" placeholder="Gastos variáveis">
 <input id="leisure" type="number" placeholder="Lazer">
 </div>
-<button onclick="calculate()">Atualizar painel</button>
+<button onclick="calculate()">Atualizar Painel</button>
 </div>
 
-<!-- despesas -->
 <div class="card section">
-<div class="label">Resumo Financeiro Mensal</div>
+<div class="label">Mapa de Gastos</div>
 <canvas id="expenseChart"></canvas>
 </div>
 
-<!-- investimento -->
 <div class="card section">
-<div class="label">Simulador de Investimentos</div>
+<div class="label">Score Financeiro</div>
+<div class="metric orange" id="score">0 / 100</div>
+<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+<p class="advice" id="progressText">Preencha seus dados.</p>
+</div>
+
+<div class="card section">
+<div class="label">Perfil Financeiro</div>
+<div class="metric blue" id="profileType">---</div>
+<p class="advice" id="profileDesc"></p>
+</div>
+
+<div class="card section">
+<div class="label">IA Controle</div>
+<div class="list-box" id="aiInsight">Aguardando análise...</div>
+</div>
+
+</div>
+
+<!-- INVESTIMENTOS -->
+<div id="investimentosPage" class="hidden">
+
+<div class="grid">
+<div class="card"><div class="label">Valor Investido</div><div class="metric purple" id="investValue">R$ 0,00</div></div>
+<div class="card"><div class="label">Rendimento 30 dias</div><div class="metric blue" id="forecast">R$ 0,00</div></div>
+<div class="card"><div class="label">Patrimônio Futuro</div><div class="metric green" id="saving">R$ 0,00</div></div>
+<div class="card"><div class="label">Perfil</div><div class="metric orange" id="investProfile">---</div></div>
+</div>
+
+<div class="card section">
+<div class="label">Investimento</div>
+
+<select id="investMode">
+<option value="auto">Usar valor recomendado</option>
+<option value="custom">Valor personalizado</option>
+</select>
+
+<input id="customInvest" class="hidden" type="number" placeholder="Digite valor">
 
 <select id="investType">
 <option value="0.005">Poupança</option>
-<option value="0.009">CDI 100%</option>
-<option value="0.011">CDB Banco</option>
+<option value="0.009">CDI</option>
+<option value="0.011">CDB</option>
 <option value="0.010">Tesouro Selic</option>
+<option value="0.013">ETF Médio</option>
 </select>
-
-<p class="advice" id="investCompare">Escolha um investimento.</p>
-</div>
-
-<!-- retorno -->
-<div class="grid section">
-<div class="card">
-<div class="label">Rendimento em 30 dias</div>
-<div class="metric blue" id="forecast">R$ 0,00</div>
-</div>
-
-<div class="card">
-<div class="label" id="futureLabel">Patrimônio em 1 ano</div>
 
 <select id="yearsSelect">
 <option value="1">1 Ano</option>
@@ -303,82 +333,21 @@ border-radius:20px;
 <option value="30">30 Anos</option>
 </select>
 
-<div class="metric green" id="saving">R$ 0,00</div>
-</div>
+<button onclick="calculate()">Simular</button>
+
+<p class="advice" id="investCompare">Preencha os dados para começar.</p>
 </div>
 
-<!-- score -->
 <div class="card section">
-<div class="label">Score Financeiro</div>
-<div class="metric purple" id="score">0 / 100</div>
-</div>
-
-<!-- perfil -->
-<div class="card section">
-<div class="label">Perfil Financeiro</div>
-<div class="metric blue" id="profileType">---</div>
-<p class="advice" id="profileDesc"></p>
-</div>
-
-<!-- ia -->
-<div class="card section fade-up glow">
-<div class="label">IA Insights</div>
-<div class="metric blue" style="font-size:1.1rem" id="aiInsight">Aguardando dados financeiros...</div>
-<p class="advice" id="aiSub"></p>
-</div>
-
-<!-- coach -->
-<div class="card section">
-<div class="label">MoneyMind Coach</div>
-<div class="metric blue" style="font-size:1.05rem" id="coachMsg">Preencha seus dados para receber recomendações.</div>
-<p class="advice" id="coachSub"></p>
-</div>
-
-<!-- evolução -->
-<div class="card section">
-<div class="label">Evolução Financeira</div>
-<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
-<p class="advice" id="progressText">Complete seu perfil financeiro.</p>
-</div>
-
-<!-- rico pobre -->
-<div class="card section">
-<div class="label">Simulador Rico x Pobre</div>
-<div class="grid">
-<div><p class="advice">Pessoa A</p><div class="metric red" id="poorValue">R$ 0,00</div></div>
-<div><p class="advice">Pessoa B</p><div class="metric green" id="richValue">R$ 0,00</div></div>
-</div>
-<p class="advice" id="richText"></p>
-</div>
-
-<!-- regra -->
-<div class="card section">
-<div class="label">Método 50 / 30 / 20</div>
-<div class="grid">
-<div><p class="advice">Essencial</p><div class="metric blue" id="rule50">R$ 0,00</div></div>
-<div><p class="advice">Lazer</p><div class="metric purple" id="rule30">R$ 0,00</div></div>
-<div><p class="advice">Investir</p><div class="metric green" id="rule20">R$ 0,00</div></div>
-</div>
-</div>
-
-<!-- comparador -->
-<div class="card section fade-up">
-<div class="label">Comparador Inteligente de Investimentos (12 meses)</div>
-
-<div class="grid">
-<div><p class="advice">Poupança</p><div class="metric blue" id="comp1">R$ 0,00</div></div>
-<div><p class="advice">CDI 100%</p><div class="metric green" id="comp2">R$ 0,00</div></div>
-<div><p class="advice">CDB Banco</p><div class="metric purple" id="comp3">R$ 0,00</div></div>
-<div><p class="advice">Tesouro Selic</p><div class="metric blue" id="comp4">R$ 0,00</div></div>
-</div>
-
-<p class="advice">Comparação considerando o valor sugerido para investir mensalmente.</p>
-</div>
-
-<!-- patrimonio -->
-<div class="card section">
-<div class="label">Patrimônio Acumulado</div>
+<div class="label">Crescimento Patrimonial</div>
 <canvas id="chart"></canvas>
+</div>
+
+<div class="card section">
+<div class="label">IA Investidora</div>
+<div class="list-box" id="investAI">Aguardando dados...</div>
+</div>
+
 </div>
 
 <footer>MoneyMind Pro • Plataforma Financeira Inteligente</footer>
@@ -387,7 +356,7 @@ border-radius:20px;
 </section>
 
 <script>
-let chart=null, expenseChart=null;
+let chart=null,expenseChart=null;
 const $=id=>document.getElementById(id);
 
 function money(v){
@@ -418,10 +387,20 @@ localStorage.removeItem('user');
 location.reload();
 }
 
-function toggleTheme(){
-document.body.style.filter=
-document.body.style.filter==='invert(1) hue-rotate(180deg)'?'':'invert(1) hue-rotate(180deg)';
+function showTab(tab){
+$('gastosPage').classList.add('hidden');
+$('investimentosPage').classList.add('hidden');
+
+if(tab==='gastos'){
+$('gastosPage').classList.remove('hidden');
+}else{
+$('investimentosPage').classList.remove('hidden');
 }
+}
+
+$('investMode').addEventListener('change',()=>{
+$('customInvest').classList.toggle('hidden',$('investMode').value!=='custom');
+});
 
 function calculate(){
 
@@ -432,98 +411,58 @@ const leisure=+$('leisure').value||0;
 
 const expenses=fixed+variable+leisure;
 const remain=income-expenses;
-const invest=remain>0?remain*0.4:0;
+const recommended=remain>0?remain*0.4:0;
 
-const rate=+$('investType').value||0.005;
-const years=+$('yearsSelect').value||1;
+let invest = $('investMode').value==='custom'
+? (+$('customInvest').value||0)
+: recommended;
 
 $('m1').textContent=money(income);
 $('m2').textContent=money(expenses);
 $('m3').textContent=money(remain);
-$('m4').textContent=money(invest);
-$('forecast').textContent=money(invest*rate);
-
-/* patrimonio */
-let total=0;
-const growth=[];
-const labels=[];
-
-for(let i=1;i<=years*12;i++){
-total=(total+invest)*(1+rate);
-growth.push(total);
-labels.push(i%12===0?'Ano '+(i/12):'M'+i);
-}
-
-$('saving').textContent=money(total);
-$('futureLabel').textContent='Patrimônio em '+years+(years>1?' anos':' ano');
-$('investCompare').textContent='Investindo '+money(invest)+' por mês, em '+years+(years>1?' anos':' ano')+' você teria '+money(total);
+$('m4').textContent=money(recommended);
+$('investValue').textContent=money(invest);
 
 /* score */
 let score=100;
 if(expenses>income)score-=45;
-if(leisure>income*0.20)score-=15;
+if(leisure>income*0.2)score-=15;
 if(variable>income*0.25)score-=15;
-if(remain<income*0.10)score-=15;
+if(remain<income*0.1)score-=15;
 if(score<0)score=0;
-$('score').textContent=score+' / 100';
 
-/* perfil */
+$('score').textContent=score+' / 100';
+$('progressBar').style.width=score+'%';
+
+$('progressText').textContent=
+score<50?'Situação crítica':
+score<75?'Bom controle':
+'Elite financeira';
+
 if(remain<=0){
 $('profileType').textContent='Endividado';
-$('profileDesc').textContent='Seus gastos ultrapassam sua renda.';
-$('aiInsight').textContent='Você está perdendo dinheiro mensalmente.';
-$('coachMsg').textContent='Reduza gastos urgentes.';
+$('profileDesc').textContent='Gastos maiores que renda.';
+$('aiInsight').textContent='Corte despesas urgentes e reorganize contas.';
 }else if(remain<income*0.15){
 $('profileType').textContent='Controlado';
-$('profileDesc').textContent='Pequenos ajustes melhoram tudo.';
-$('aiInsight').textContent='Seu potencial está travado.';
-$('coachMsg').textContent='Economize mais para acelerar.';
+$('profileDesc').textContent='Boa base com ajustes possíveis.';
+$('aiInsight').textContent='Reduza gastos variáveis para crescer.';
 }else{
 $('profileType').textContent='Investidor';
 $('profileDesc').textContent='Excelente comportamento financeiro.';
-$('aiInsight').textContent='Seu comportamento está acima da média.';
-$('coachMsg').textContent='Continue nesse ritmo.';
+$('aiInsight').textContent='Você está pronto para acelerar patrimônio.';
 }
 
-$('progressBar').style.width=score+'%';
-$('progressText').textContent=score<50?'Inicial':score<75?'Bom controle':'Elite financeira';
-
-$('poorValue').textContent=money(0);
-
-let rich=0;
-for(let i=1;i<=240;i++){
-rich=(rich+invest)*(1+rate);
-}
-$('richValue').textContent=money(rich);
-$('richText').textContent='Investir por 20 anos muda completamente sua vida.';
-
-$('rule50').textContent=money(income*0.5);
-$('rule30').textContent=money(income*0.3);
-$('rule20').textContent=money(income*0.2);
-
-/* comparador */
-function sim(r){
-let t=0;
-for(let i=1;i<=12;i++){
-t=(t+invest)*(1+r);
-}
-return t;
-}
-
-$('comp1').textContent=money(sim(0.005));
-$('comp2').textContent=money(sim(0.009));
-$('comp3').textContent=money(sim(0.011));
-$('comp4').textContent=money(sim(0.010));
-
-/* grafico despesas */
+/* gráfico gastos */
 if(expenseChart)expenseChart.destroy();
+
 expenseChart=new Chart($('expenseChart'),{
 type:'doughnut',
 data:{
 labels:['Fixas','Variáveis','Lazer'],
 datasets:[{
 data:[fixed,variable,leisure],
-borderWidth:3
+borderWidth:2
 }]
 },
 options:{
@@ -532,8 +471,41 @@ cutout:'70%'
 }
 });
 
-/* grafico patrimonio */
+/* investimentos */
+const rate=+$('investType').value||0.005;
+const years=+$('yearsSelect').value||1;
+
+$('forecast').textContent=money(invest*rate);
+
+let total=0;
+let growth=[];
+let labels=[];
+
+for(let i=1;i<=years*12;i++){
+total=(total+invest)*(1+rate);
+growth.push(total);
+labels.push(i%12===0?'Ano '+(i/12):'');
+}
+
+$('saving').textContent=money(total);
+
+$('investCompare').textContent=
+'Investindo '+money(invest)+' por mês, em '+years+
+(years>1?' anos ':' ano ')+'você teria '+money(total);
+
+if(rate<=0.005){
+$('investProfile').textContent='Conservador';
+$('investAI').textContent='Baixo risco e segurança.';
+}else if(rate<=0.010){
+$('investProfile').textContent='Moderado';
+$('investAI').textContent='Equilíbrio entre risco e retorno.';
+}else{
+$('investProfile').textContent='Agressivo';
+$('investAI').textContent='Maior crescimento com mais risco.';
+}
+
 if(chart)chart.destroy();
+
 chart=new Chart($('chart'),{
 type:'line',
 data:{
